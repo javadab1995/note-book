@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function App() {
   const [items, setItems] = useState([]);
 
-  const [language, setLanguage] = useState("en"); // State for language
+  const [language, setLanguage] = useState("en"); 
  
   const translations = {
     en: {
@@ -160,7 +160,7 @@ function FormAddItem({ onAddItem,translations }) {
         onChange={(e) => setDescription(e.target.value)}
       />
       
-      <button type="submit" className="button">{translations.addButton }</button> {/* Fixed button tag */}
+      <button type="submit" className="button">{translations.addButton }</button> 
     </form>
   );
 }
