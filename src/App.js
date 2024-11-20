@@ -49,7 +49,7 @@ export default function App() {
   return (
       <div className="App">
       <Header text={translations[language].header} />
-      <Button onClick={toggleLanguage}>{language === "en" ? "فارسی" : "English"}</Button>
+      <Button  onClick={toggleLanguage}>{language === "en" ? "فارسی" : "English"}</Button>
       <Table items={items} onDeleteItem={handleDeleteItem} onDeleteList={handleDeleteList} translations={translations[language]} />
       <FormAddItem onAddItem={handleAddItem} translations={translations[language]} />
     </div>
