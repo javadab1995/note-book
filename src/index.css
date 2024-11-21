@@ -273,7 +273,7 @@ form h2 {
   justify-self: center;
    display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 300px;
  }
  .btn{
   display: flex;
