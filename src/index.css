@@ -250,10 +250,13 @@ form h2 {
   display: flex;
   width: 80%;
   justify-self:center;
+  height: 150px;
  }
  form{
   width: 80%;
   justify-self: center;
+   display: flex;
+  flex-direction: column;
  }
  .btn{
   display: flex;
@@ -262,4 +265,14 @@ form h2 {
   width: 50%;
  justify-content: center;
  }
+input, textarea {
+  width: 80%;
+}
+
+textarea{
+  padding: 20px;
+}
+h1{
+  font-size: 20px;
+}
 }
