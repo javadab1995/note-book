@@ -26,6 +26,7 @@ export function FormAddItem({ onAddItem, translations }) {
     <form className="form-add-sub" onSubmit={handleSubmit}>
       <label>{translations.title}</label>
       <input
+        maxLength={10}
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)} />

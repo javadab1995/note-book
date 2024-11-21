@@ -13,13 +13,18 @@ export function ListItem({ item, onDeleteItem, translations }) {
   return (
     <li>
       <div className="item-list--first">
-
         <h2>{item.title} </h2>
+      </div>
+      <div>
         <p>{item.description}</p>
       </div>
       <div className="item-list--secound">
-        <span>{weekday} {day}  </span>
-        <Button onClick={() => onDeleteItem(item.id)}>{translations.deleteButton}</Button>
+        <span>
+          {weekday} {day}{" "}
+        </span>
+        <Button onClick={() => onDeleteItem(item.id)}>
+          {translations.deleteButton}
+        </Button>
       </div>
     </li>
   );

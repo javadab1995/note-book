@@ -28,6 +28,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.rtl{
+  direction: rtl;
+}
 .lang {
   font-family: "Handjet", sans-serif;
   font-optical-sizing: auto;
@@ -97,29 +100,36 @@ ul li {
     list-style: none;
     padding: 15px;
     display: flex ;
-    justify-content: space-between;
     gap: 10px;
+    justify-content: space-between;
+    width: 100%;
 }
 .item-list--first {
   display: flex;
-  width: 70%;
   gap: 25px;
+  max-width: fit-content;
+  overflow: hidden;
+ 
 }
 .item-list--first h2 {
   width: 10%;
   color: #343a40;
   font-size: 18px;
   font-weight: 600;
+  max-width: fit-content;
 }
 .item-list--first p {
+  width: 40%;
   font-size: 14px;
   font-weight: 500;
-  margin-top: 4px;
-  margin-left: 10px;
+  padding: 5px;
+  display: flex;
+  justify-self: center;
 }
 .item-list--secound {
   display: flex;
   gap: 20px;
+  width: 30%;
 }
 
 
@@ -134,14 +144,14 @@ ul li {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.selected,
+
 .table li:hover {
   background-color: var(--color-lightest);
   
 }
 
 
-.selected,
+
 .table li:hover  .button {
   background-color: var(--color-lightest);
   color: #e03131;
@@ -241,6 +251,10 @@ form h2 {
 
 
 @media (max-width: 480px) {
+  #root{
+    width: 100vw;
+    height: 100vh;
+  }
  .App{
   width: 100%;
   height: 100vh;
@@ -251,12 +265,15 @@ form h2 {
   width: 80%;
   justify-self:center;
   height: 150px;
+  overflow: scroll;
  }
+ 
  form{
   width: 80%;
   justify-self: center;
    display: flex;
   flex-direction: column;
+  height: 250px;
  }
  .btn{
   display: flex;
@@ -272,7 +289,65 @@ input, textarea {
 textarea{
   padding: 20px;
 }
-h1{
-  font-size: 20px;
+
+h1 {
+  text-align: center;
+  font-family: "Bungee Spice", sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 10px;
+  letter-spacing: -2px;
+  padding: 1.5rem 0;
 }
+
+.month{
+  height: 50px;
+}
+.table-list{
+  padding: 15px;
+  font-size: 14px;
+}
+
+
+.table > .button {
+  width: 100%;
+  padding: 3px;
+ align-self: start;
+ justify-self: start;
+ margin-top: 0;
+ margin-bottom: 25px;
+ border-radius:0 0px 4px 4px;
+ 
+}
+
+ul li{
+  padding: 3px;
+ 
+}
+ul {
+  margin-top: 20px;
+}
+
+
+form .button {
+  margin-top: 0.6rem;
+ width: 80%;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+.table li:hover {
+  background-color: var(--color-lightest);
+  
+}
+
+
+
+.table li:hover  .button {
+  background-color: var(--color-lightest);
+  color: #e03131;
+}
+
 }

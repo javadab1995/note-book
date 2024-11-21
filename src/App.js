@@ -47,7 +47,8 @@ export default function App() {
     setItems(items => items.filter(item => item.id !== id))
   }
   return (
-      <div className="App">
+    <div className={language === "fa" ? "rtl" : "App"}>
+     {console.log(language)}
       <Header text={translations[language].header} />
       <Button  onClick={toggleLanguage}>{language === "en" ? "فارسی" : "English"}</Button>
       <Table items={items} onDeleteItem={handleDeleteItem} onDeleteList={handleDeleteList} translations={translations[language]} />
